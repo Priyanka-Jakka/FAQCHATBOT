@@ -1,0 +1,10 @@
+streamlit
+faiss-cpu
+langchain
+langchain-community
+langchain-huggingface
+langchain-groq
+sentence-transformers
+python-dotenv
+pandas
+httpx
