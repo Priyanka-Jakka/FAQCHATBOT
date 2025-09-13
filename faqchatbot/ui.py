@@ -12,15 +12,17 @@ from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
 
 load_dotenv()
+api_key = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
 llm=ChatGroq(
     model="gemma2-9b-it",
     temperature=0,  # ✅ Explicit key to avoid 401
+    api_key=api_key,
     http_client=httpx.Client(verify=False)
 )
 
 retriever=Retriever().get_retriever()
 
-template=[("system","""You are an FAQ chatbot. Answer strictly from the context.If the answwer is not present, reply with: "I don't know".
+template=[("system","""You are an FAQ chatbot. Answer strictly from the context. If the answer is not present, reply with: "I don't know".
            Context:{context}"""),
           ("human", "Question: {question}")]
 
