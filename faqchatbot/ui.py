@@ -42,7 +42,7 @@ def answer_question(query):
 
 # --- Streamlit UI ---
 st.set_page_config(page_title="Wellness FAQ ChatBot", layout="centered")
-st.title("💬 FAQ ChatBot")
+st.title("💬 Wellness FAQ ChatBot")
 
 query=st.text_input("Ask me a question")
 
