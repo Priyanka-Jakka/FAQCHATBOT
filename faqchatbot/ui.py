@@ -41,7 +41,7 @@ def answer_question(query):
     return answer,docs
 
 # --- Streamlit UI ---
-st.set_page_config(page_title="FAQ ChatBot", layout="centered")
+st.set_page_config(page_title="Wellness FAQ ChatBot", layout="centered")
 st.title("💬 FAQ ChatBot")
 
 query=st.text_input("Ask me a question")
