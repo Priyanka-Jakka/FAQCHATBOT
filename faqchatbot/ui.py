@@ -12,7 +12,13 @@ from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
 
 load_dotenv()
-api_key = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
+
+# api_key = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
+try:
+    api_key = st.secrets["GROQ_API_KEY"]
+except (KeyError, st.runtime.secrets.StreamlitSecretNotFoundError):
+    api_key = os.getenv("GROQ_API_KEY")
+
 llm=ChatGroq(
     model="gemma2-9b-it",
     temperature=0,  # ✅ Explicit key to avoid 401
