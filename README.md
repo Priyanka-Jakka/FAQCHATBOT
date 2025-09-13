@@ -1,4 +1,4 @@
-# FAQ ChatBot 🤖
+# Wellness FAQ ChatBot 🤖
 
 A simple FAQ chatbot built with:
 - **LangChain**
