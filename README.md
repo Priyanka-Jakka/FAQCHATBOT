@@ -38,3 +38,11 @@ python build_index.py
 ```bash
 streamlit run faqchatbot/ui.py
 ```
+
+## 🌐 Live Demo
+
+Try the Wellness FAQ ChatBot live on Streamlit Cloud:  
+[💬 Open in Streamlit](https://faqchatbot-aq7a4lappt4q6wkoiug3cmk.streamlit.app/)
+
+Alternatively, click the badge:  
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://faqchatbot-aq7a4lappt4q6wkoiug3cmk.streamlit.app/)
